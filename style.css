@@ -1,0 +1,114 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Хедер -------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8b400;
+    padding: 16px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.menu li a:hover {
+    color: #fff;
+}
+
+/* --------- Основна секція ---------- */
+.main-content {
+    padding: 32px;
+    background-color: #fff8e7;
+}
+
+.content-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.content-item {
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.content-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.content-item.text {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.content-item.text h2 {
+    margin-top: 0;
+}
+
+.content-item.text ul {
+    padding-left: 24px;
+}
+
+.content-item.text ul li::marker {
+    color: #f8b400;
+}
+
+/* ------ Футер ----- */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+}
+
+/* -------- Адапт.  --------- */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .content-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-item {
+        max-width: 90%;
+    }
+}
